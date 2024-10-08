@@ -1,0 +1,42 @@
+class Age {
+String name;
+int age;
+public Age(String name, int age) {
+	this.name = name;
+	this.age = age;
+}
+
+}
+
+package com.ss.Predicate;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class AgePredicate {
+
+	public static void main(String[] args) {
+		
+		Age a1=new Age("Suraj", 24);
+		Age a2=new Age("Raj", 22);
+		Age a3=new Age("John", 14);
+		Age a4=new Age("Martin",17);
+		
+		List<Age> li=Arrays.asList(a1,a2,a3,a4);
+		
+		Predicate<Age> Pp= P->P.age>=18;
+		
+		for(Age age:li){
+			
+			if(Pp.test(age)) {
+				System.out.println(age.name);
+			}
+			
+		}
+		
+
+	}
+
+}
