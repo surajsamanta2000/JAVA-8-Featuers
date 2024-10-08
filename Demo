@@ -1,0 +1,20 @@
+package com.ss.Predicate;
+
+import java.util.function.Predicate;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		String names[]= {"Anisha","Annamalai","Bumrah","Jay"};
+		
+		Predicate<String> ps= name->name.charAt(0)=='A';
+		
+		for(String name:names) {
+			if(ps.test(name)) {
+				System.out.println(name);
+			}
+		}
+
+	}
+
+}
