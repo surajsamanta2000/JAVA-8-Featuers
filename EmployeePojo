@@ -1,0 +1,16 @@
+package com.ss.Predicate;
+
+public class EmployeePojo {
+	
+	String name,loc,dept;
+
+	public EmployeePojo(String name, String loc, String dept) {
+		this.name = name;
+		this.loc = loc;
+		this.dept = dept;
+	}
+	
+	
+	
+
+}
