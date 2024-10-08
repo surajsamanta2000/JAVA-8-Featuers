@@ -1,0 +1,31 @@
+package com.ss.Predicate;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class EmployeeMain {
+
+	public static void main(String[] args) {
+		
+		EmployeePojo e1=new EmployeePojo("Abhishek","BLR","DB");
+		EmployeePojo e2=new EmployeePojo("Sekhar","HYD","Testing");
+		EmployeePojo e3=new EmployeePojo("John","Pune","Development");
+		EmployeePojo e4=new EmployeePojo("Ariya","BLR","DB");
+		
+		List<EmployeePojo> l= Arrays.asList(e1,e2,e3,e4);
+		
+		Predicate<EmployeePojo> p1=(e)->e.loc.equals("BLR");
+		Predicate<EmployeePojo> p2=(e)->e.dept.equals("DB");
+		
+		Predicate<EmployeePojo> p=p1.and(p2);
+		
+		for(EmployeePojo e:l) {
+			if(p.test(e)) {
+				System.out.println(e.name);
+			}
+		}
+
+	}
+
+}
