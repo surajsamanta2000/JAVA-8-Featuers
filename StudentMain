@@ -1,0 +1,22 @@
+package com.ss.streamAPI;
+
+import java.util.stream.Stream;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student("Abhinash",45);
+		Student s2=new Student("Soumayajit",32);
+		Student s3=new Student("John",21);
+		Student s4=new Student("Ashok",39);
+		Student s5=new Student("Harish",18);
+		
+		Stream<Student> ss= Stream.of(s1,s2,s3,s4,s5);
+		
+		//ss.filter(s->s.Age>=25).forEach(s->System.out.println(s));
+		
+		ss.filter(s->s.Age>=30 && s.name.startsWith("A")).forEach(s->System.out.println(s));
+	}
+
+}
