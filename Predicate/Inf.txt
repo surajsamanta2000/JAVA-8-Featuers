@@ -1,0 +1,17 @@
+
+Q:What is negate()?
+
+>>The negate() method in the Predicate interface returns a predicate that represents the logical negation of this predicate.
+  In simple terms — it reverses the condition.
+  If the original predicate returns true, the negated predicate returns false, and vice versa.
+  
+  
+  USE: 
+  
+>>>✅ When to Use negate()
+
+When you already have a predicate and want to reverse its result without writing a separate lambda.
+
+For cleaner, readable code in functional programming with streams.
+
+When chaining multiple conditions with .and() / .or() and you need to invert one of them.

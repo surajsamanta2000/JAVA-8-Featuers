@@ -1,0 +1,14 @@
+📌 What is Consumer?
+
+>>A functional interface in java.util.function
+
+>>Represents an operation that accepts a single input argument and returns no result
+
+>>It’s typically used for actions like printing, saving, logging, etc.
+
+Syntax:
+
+@FunctionalInterface
+public interface Consumer<T> {
+    void accept(T t);
+}
